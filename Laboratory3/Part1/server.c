@@ -26,8 +26,10 @@ int main(int argc, char *argv)
         printf("Polychili soobshenie, rcid %X \n", rcvid);
         if (rcvid > 0)
         {
+            #ifdef DEBUG
             printf("Soobshenie takoe : \"%s\"%d.\n", message,strlen(message));
             printf("Test takoi \"%s\"%d.\n",valid,strlen(valid));
+            #endif
             if (!strcmp(message, valid))
                 sprintf(r_message, "v Test passed");
             else
